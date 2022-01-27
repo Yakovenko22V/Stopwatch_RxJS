@@ -51,7 +51,7 @@ function App() {
   };
 
   return (<>
-    <h1>TIMER</h1>
+    <h1>TIMER_RxJS</h1>
     <div className="App">
       <p>{timerView()}</p>
       <button onClick={start_stop}>{(start) ? 'Stop' : 'Start'}</button>
