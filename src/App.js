@@ -55,9 +55,11 @@ function App() {
     <h1>STOPWATCH_RxJS</h1>
     <div className="App">
       <p>{timerView()}</p>
-      <button onClick={start_stop}>{(start) ? 'Stop' : 'Start'}</button>
-      <button id='wait' onClick={waitFunc}>Wait</button>
-      <button onClick={reset}>Reset</button>
+      <div className='btns'>
+        <button onClick={start_stop}>{(start) ? 'Stop' : 'Start'}</button>
+        <button id='wait' onClick={waitFunc}>Wait</button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </div>
   </>
   );
