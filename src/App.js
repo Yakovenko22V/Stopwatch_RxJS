@@ -8,6 +8,7 @@ function App() {
   const [start, setStart] = useState(false);
 
   useEffect(() => {
+    document.title = 'STOPWATCH_RxJS'
     const count$ = new Subject();
     const timer = interval(1000);
     timer.pipe(takeUntil(count$)).subscribe(() => {
@@ -41,7 +42,7 @@ function App() {
   };
 
   const reset = () => {
-    setTime(0) && setStart(true)
+    setTime(0) || setStart(true)
   }
 
   const timerView = () => {
@@ -51,7 +52,7 @@ function App() {
   };
 
   return (<>
-    <h1>TIMER_RxJS</h1>
+    <h1>STOPWATCH_RxJS</h1>
     <div className="App">
       <p>{timerView()}</p>
       <button onClick={start_stop}>{(start) ? 'Stop' : 'Start'}</button>
